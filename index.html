@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sketch.rb</title>
+        <style type="text/css" media="screen">
+            #editor {
+                position: absolute;
+                top: 0;
+                right: 50%;
+                bottom: 0;
+                left: 0;
+                border-right: 1px solid #BBB;
+            }
+            [id="editor"] {
+                color: transparent;
+            }
+
+            #stage {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 50%;
+                border-left: 1px solid #DEDEDE;
+            }
+        </style>
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/main.css">
+    </head>
+    <body>
+        <div id="editor">rect 0, 0, 200, 200 do
+    fill 'blue'
+end
+
+rect 100, 100, 200, 200 do
+    stroke 'white', 10
+    fill 'green'
+end
+
+arc 100, 100, 40, { start: 0, end: 2 * `Math.PI` } do
+    stroke 'white', 10
+    fill '#DEDEDE'
+end</div>
+        <div id="stage"></div>
+        <script src="/assets/vendor/ace.js"></script>
+        <script src="/assets/vendor/ace/theme-tomorrow.js"></script>
+        <script src="/assets/vendor/ace/mode-ruby.js"></script>
+        <script src="/assets/application.js"></script>
+        <script src="/assets/sketch-editor.js"></script>
+    </body>
+</html>
